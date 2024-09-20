@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'bootstrap/scss/bootstrap.scss';
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.home_page {
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    .left {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+    }
+    .right {
+      .userBox {
+        button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
